@@ -7,7 +7,6 @@ from fastapi import HTTPException
 from dto import ContentRequest, CollaborativeRequest, HybridRequest
 from utils import load_data_from_url, load_model_from_url, load_technicians_df
 from dotenv import load_dotenv
-from firebase_admin import firestore
 
 # Load environment variables
 load_dotenv()
