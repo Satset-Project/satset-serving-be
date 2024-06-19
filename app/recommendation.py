@@ -15,8 +15,8 @@ technicians_df_url = os.getenv('TECHNICIANS_DF_URL')
 
 # Load models and preprocessing objects
 try:
-    collaborative_model_url = "https://storage.googleapis.com/dpml/rec_sys/models/collaborative_filtering.h5"
-    content_based_model_url = "https://storage.googleapis.com/dpml/rec_sys/models/content_based_filtering.h5"
+    collaborative_model_url = "https://storage.googleapis.com/model-recommend/models/collaborative_filtering.h5"
+    content_based_model_url = "https://storage.googleapis.com/model-recommend/models/content_based_filtering.h5"
 
     collaborative_model_data = load_model_from_url(collaborative_model_url)
     content_based_model_data = load_model_from_url(content_based_model_url)
@@ -39,12 +39,12 @@ except Exception as e:
     raise RuntimeError(f"Error loading models: {e}")
 
 try:
-    tfidf = load_data_from_url('https://storage.googleapis.com/dpml/rec_sys/models/tfidf_vectorizer.pkl', is_pickle=True)
-    scaler_experience = load_data_from_url('https://storage.googleapis.com/dpml/rec_sys/models/scaler_experience.pkl', is_pickle=True)
-    scaler_ratings = load_data_from_url('https://storage.googleapis.com/dpml/rec_sys/models/scaler_ratings.pkl', is_pickle=True)
-    encoder = load_data_from_url('https://storage.googleapis.com/dpml/rec_sys/models/encoder.pkl', is_pickle=True)
-    user_id_map = load_data_from_url('https://storage.googleapis.com/dpml/rec_sys/models/user_id_map.pkl', is_pickle=True)
-    technician_id_map = load_data_from_url('https://storage.googleapis.com/dpml/rec_sys/models/technician_id_map.pkl', is_pickle=True)
+    tfidf = load_data_from_url('https://storage.googleapis.com/model-recommend/models/tfidf_vectorizer.pkl', is_pickle=True)
+    scaler_experience = load_data_from_url('https://storage.googleapis.com/model-recommend/models/scaler_experience.pkl', is_pickle=True)
+    scaler_ratings = load_data_from_url('https://storage.googleapis.com/model-recommend/models/scaler_ratings.pkl', is_pickle=True)
+    encoder = load_data_from_url('https://storage.googleapis.com/model-recommend/models/encoder.pkl', is_pickle=True)
+    user_id_map = load_data_from_url('https://storage.googleapis.com/model-recommend/models/user_id_map.pkl', is_pickle=True)
+    technician_id_map = load_data_from_url('https://storage.googleapis.com/model-recommend/models/technician_id_map.pkl', is_pickle=True)
 except Exception as e:
     raise RuntimeError(f"Error loading preprocessing objects: {e}")
 
