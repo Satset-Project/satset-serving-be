@@ -53,7 +53,7 @@ Backend service of Satset.
 2. Update your .env
 
    ```bash
-   for env TECHNICIANS_DF_URL, you must be deploy buckect technicians.csv and using the public url
+   on env TECHNICIANS_DF_URL, you must be deploy buckect technicians.csv and using the public url
    ```
 
 3. Run for the first time
