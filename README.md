@@ -54,7 +54,7 @@ Backend service of Satset.
    cd app
    pip install fastapi==0.95.2 uvicorn==0.21.1 pandas==2.0.1 numpy==1.26.4 tensorflow==2.16.1 scikit-learn==1.5.0 starlette==0.27.0 pydantic==1.10.7
    ```
-   or Dockerfile
+   - Dockerfile
    ```bash
    docker build -t example_be .
    docker run -p 8000:8000 example_be
